@@ -24,7 +24,7 @@ export default function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900">
       <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <Link to="/" className="flex items-center gap-3">
@@ -58,9 +58,39 @@ export default function Layout() {
         </div>
       </header>
 
-      <main>
+      <main className="flex-1">
         <Outlet />
       </main>
+
+      <footer className="border-t border-slate-200 bg-slate-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <h3 className="text-xl font-semibold">Get in touch</h3>
+              <Link
+                to="/contact"
+                className="mt-4 inline-block rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-900/30 transition hover:-translate-y-0.5"
+              >
+                Contact me
+              </Link>
+            </div>
+            <div>
+              <p className="text-sm uppercase tracking-[0.15em] text-slate-400">Address</p>
+              <p className="mt-2 text-base leading-7">Maidenbower, Crawley, West Sussex RH10 7HA</p>
+            </div>
+            <div>
+              <p className="text-sm uppercase tracking-[0.15em] text-slate-400">Phone</p>
+              <a href="tel:07708733772" className="mt-2 block text-base hover:text-indigo-200">07708 733772</a>
+            </div>
+            <div>
+              <p className="text-sm uppercase tracking-[0.15em] text-slate-400">Email</p>
+              <a href="mailto:jodie@vaughandyslexiaservices.co.uk" className="mt-2 block break-all text-base hover:text-indigo-200">
+                jodie@vaughandyslexiaservices.co.uk
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
