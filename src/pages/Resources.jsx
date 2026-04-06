@@ -1,3 +1,5 @@
+import Seo from "../Seo";
+
 const dyslexiaInfo = [
   {
     title: "British Dyslexia Association – What is Dyslexia?",
@@ -26,6 +28,10 @@ const references = [
 export default function Resources() {
   return (
     <section className="bg-indigo-50 py-20">
+      <Seo
+        title="Resources"
+        description="Helpful dyslexia resources including links to the British Dyslexia Association, educational videos and recommended books for parents, students and teachers."
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Resources</p>

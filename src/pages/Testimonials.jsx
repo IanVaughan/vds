@@ -1,3 +1,5 @@
+import Seo from "../Seo";
+
 const testimonials = [
   {
     name: "Zoe",
@@ -20,6 +22,10 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="bg-white py-20">
+      <Seo
+        title="Testimonials"
+        description="Read what families and students say about Vaughan Dyslexia Services. Testimonials from parents and adults who have had assessments and specialist tutoring."
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Testimonials</p>

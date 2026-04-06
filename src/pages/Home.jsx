@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import Seo from "../Seo";
 
 export default function Home() {
   return (
     <section className="relative overflow-hidden">
+      <Seo
+        title={null}
+        description="Vaughan Dyslexia Services offers diagnostic dyslexia assessments, access arrangement assessments and specialist tutoring across Sussex, Kent and Surrey."
+      />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(99,102,241,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.14),_transparent_30%)]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-28">
         <div>

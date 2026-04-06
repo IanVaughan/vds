@@ -1,5 +1,26 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Vaughan Dyslexia Services",
+  description:
+    "Diagnostic dyslexia assessments, access arrangement assessments and specialist tutoring for children and adults across Sussex, Kent and Surrey.",
+  url: "https://www.vaughandyslexiaservices.co.uk",
+  telephone: "07708733772",
+  email: "jodie@vaughandyslexiaservices.co.uk",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Maidenbower",
+    addressLocality: "Crawley",
+    addressRegion: "West Sussex",
+    postalCode: "RH10 7HA",
+    addressCountry: "GB",
+  },
+  areaServed: ["Sussex", "Kent", "Surrey"],
+};
 
 const servicesLinks = [
   ["Assessments", "/assessments"],
@@ -25,6 +46,9 @@ export default function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
       <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <Link to="/" className="flex items-center gap-3">

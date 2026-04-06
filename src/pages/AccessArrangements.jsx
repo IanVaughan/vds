@@ -1,6 +1,12 @@
+import Seo from "../Seo";
+
 export default function AccessArrangements() {
   return (
     <section className="bg-slate-900 py-20 text-white">
+      <Seo
+        title="Exams Access Arrangements"
+        description="Access arrangement assessments for exams including extra time, scribes and word processors. Bespoke assessments for schools, colleges and universities."
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-200">Access Arrangements</p>

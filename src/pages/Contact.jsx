@@ -1,8 +1,13 @@
 import { useState } from "react";
+import Seo from "../Seo";
 
 export default function Contact() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <Seo
+        title="Contact"
+        description="Get in touch with Vaughan Dyslexia Services. Based in Maidenbower, Crawley, West Sussex. Call, email or use the contact form to book an assessment or tutoring."
+      />
       <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Contact</p>

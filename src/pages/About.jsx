@@ -1,6 +1,12 @@
+import Seo from "../Seo";
+
 export default function About() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <Seo
+        title="About Me"
+        description="Jodie Vaughan is a Level 7 specialist teacher and assessor with over 25 years in education. Qualified SENCo offering dyslexia assessments and tutoring in Crawley, West Sussex."
+      />
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">About me</p>

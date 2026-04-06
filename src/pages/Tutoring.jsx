@@ -1,6 +1,12 @@
+import Seo from "../Seo";
+
 export default function Tutoring() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <Seo
+        title="Specialist Tutoring"
+        description="Specialist dyslexia tutoring for children aged 6–16 in Crawley, West Sussex. Tailored learning programmes based on diagnostic recommendations."
+      />
       <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Tutoring</p>

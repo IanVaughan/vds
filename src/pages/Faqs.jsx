@@ -1,3 +1,5 @@
+import Seo from "../Seo";
+
 const faqs = [
   {
     q: "How are you different to an Educational Psychologist?",
@@ -32,6 +34,10 @@ const faqs = [
 export default function Faqs() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <Seo
+        title="FAQs"
+        description="Frequently asked questions about dyslexia assessments, costs, school support, strategies for home and the difference between a specialist teacher assessor and an Educational Psychologist."
+      />
       <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">FAQs</p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Frequently asked questions.</h2>

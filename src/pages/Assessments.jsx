@@ -1,6 +1,12 @@
+import Seo from "../Seo";
+
 export default function Assessments() {
   return (
     <section className="bg-white py-20">
+      <Seo
+        title="Dyslexia Assessments"
+        description="Diagnostic dyslexia assessments from age 7 for children and adults. Includes questionnaires, cognitive testing and a full diagnostic report with recommendations."
+      />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Assessments</p>
