@@ -15,7 +15,7 @@ const services = [
     to: "/access-arrangements",
   },
   {
-    title: "Tutoring for children and adults with dyslexia",
+    title: "Specialist tutoring for children with dyslexia",
     subtitle: "Tailored learning support",
     body: "A specialist tutor will develop the right learning plan for you or your child's tuition. This is important as every individual's experience of dyslexia is distinct to them in both its nature and severity.",
     to: "/tutoring",
@@ -31,7 +31,7 @@ export default function Services() {
       />
       <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Services</p>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Support tailored to the individual.</h2>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Support tailored to the individual.</h1>
       </div>
       <div className="mt-10 grid gap-6 lg:grid-cols-3">
         {services.map((service) => (

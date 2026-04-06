@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Contact</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Feel free to get in touch with any questions.</h2>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Feel free to get in touch with any questions.</h1>
           <p className="mt-5 max-w-2xl leading-8 text-slate-700">
             You can use the form below, email directly or call me. I appreciate your interest and look forward to hearing from you.
           </p>

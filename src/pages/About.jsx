@@ -10,7 +10,7 @@ export default function About() {
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">About me</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Special Educational Needs Co-ordinator with 25 years of experience in education.</h2>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Jodie Vaughan — Special Educational Needs Co-ordinator with 25 years of experience in education.</h1>
         </div>
         <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
           <div className="space-y-5 leading-8 text-slate-700">

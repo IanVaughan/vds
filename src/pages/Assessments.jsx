@@ -10,7 +10,7 @@ export default function Assessments() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Assessments</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Diagnostic assessments from the age of 7.</h2>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Diagnostic assessments from the age of 7.</h1>
         </div>
         <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8">
           <h3 className="text-xl font-semibold text-slate-950">What happens in a diagnostic assessment?</h3>
@@ -27,6 +27,11 @@ export default function Assessments() {
             <p>In all, an assessment should take between 2–3 hours, depending on the needs of the person being assessed. I will be able to give you an idea of how long the assessment will last when I have received the questionnaires.</p>
             <p>I will arrange a telephone or video call to discuss my findings. This usually takes place the same day as the assessment. Then, around two weeks after, you will receive your full diagnostic report. Another call can be arranged to answer any questions you may have.</p>
             <p>As I hold an Assessment Practising Certificate (APC) through The Dyslexia Guild, for a student of any age, a diagnostic assessment will meet SASC guidelines and will be accepted as evidence towards applications for Disabled Student Allowance.</p>
+            <p>I carry out assessments on my premises in Maidenbower, Crawley, West Sussex and often in the child's or young person's educational setting. I also travel across Sussex, Kent and Surrey for assessments ordered by schools, colleges and universities.</p>
+          </div>
+          <div className="mt-6 rounded-2xl bg-indigo-50 p-6">
+            <p className="text-lg font-semibold text-slate-950">Assessment fee: £490</p>
+            <p className="mt-2 leading-7 text-slate-700">This includes a pre-assessment virtual meeting, the assessment itself and a minimum of 30 minutes discussion afterwards to talk through the findings, report and recommendations. I am always available to answer follow-up emails and provide further information.</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Seo from "../Seo";
+import { Helmet } from "react-helmet-async";
 
 const faqs = [
   {
@@ -32,15 +33,31 @@ const faqs = [
 ];
 
 export default function Faqs() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <Seo
         title="FAQs"
         description="Frequently asked questions about dyslexia assessments, costs, school support, strategies for home and the difference between a specialist teacher assessor and an Educational Psychologist."
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       <div className="max-w-2xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">FAQs</p>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Frequently asked questions.</h2>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Frequently asked questions.</h1>
       </div>
       <div className="mt-10 grid gap-4">
         {faqs.map((item) => (

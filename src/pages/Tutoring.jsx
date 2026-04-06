@@ -10,7 +10,7 @@ export default function Tutoring() {
       <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Tutoring</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Specialist tutoring for children aged 6–16.</h2>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Specialist tutoring for children aged 6–16.</h1>
         </div>
         <div className="space-y-5 rounded-[2rem] border border-slate-200 bg-white p-8 leading-8 text-slate-700 shadow-sm">
           <p>I deliver tutor sessions based on the recommendations in their diagnostic report and my initial assessment of needs, conducted during the introduction session, to plan a specific learning programme.</p>
@@ -19,7 +19,7 @@ export default function Tutoring() {
           <p>I offer sessions during the school day which have proved to be a great option for children who are home educated. I work closely with parents and carers who home educate to plan and implement a learning programme that can be reinforced at home during the week.</p>
           <p>I offer sessions during the day within the educational setting. Some children prefer this, as they are tired at the end of a school day. I build a good rapport and work closely with parents, carers and schools to provide useful recommendations for support in class as well as at home.</p>
           <p>I also offer tutor sessions in school for pupils who receive Pupil Premium. I am happy to talk to your child's SENCo or Inclusion Manager regarding this.</p>
-          <p>All after-school sessions take place on my premises in Maidenbower, Crawley.</p>
+          <p>All after-school sessions take place on my premises in Maidenbower, Crawley, West Sussex. I also work with schools across Sussex, Kent and Surrey.</p>
         </div>
       </div>
     </section>
