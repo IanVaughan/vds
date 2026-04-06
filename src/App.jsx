@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function VaughanDyslexiaServicesSite() {
   const nav = [
     ["Home", "home"],
@@ -365,26 +367,7 @@ export default function VaughanDyslexiaServicesSite() {
                 You can use the form below, email directly or call me. I appreciate your interest and look forward to hearing from you.
               </p>
 
-              <form className="mt-8 grid gap-4 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">Name</label>
-                  <input className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-indigo-500" placeholder="Your name" />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">Your email</label>
-                  <input type="email" className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-indigo-500" placeholder="you@example.com" />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">Message</label>
-                  <textarea rows={6} className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-indigo-500" placeholder="How can I help?" />
-                </div>
-                <div className="flex flex-wrap items-center gap-3">
-                  <button type="button" className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5">
-                    Submit enquiry
-                  </button>
-                  <span className="text-sm text-slate-500">Hook this form up to Netlify Forms, Formspree or a backend endpoint.</span>
-                </div>
-              </form>
+              <ContactForm />
             </div>
 
             <div className="rounded-[2rem] bg-slate-900 p-8 text-white shadow-2xl shadow-slate-300">
@@ -410,5 +393,79 @@ export default function VaughanDyslexiaServicesSite() {
         </section>
       </main>
     </div>
+  );
+}
+
+function ContactForm() {
+  const [status, setStatus] = useState("idle");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    setStatus("submitting");
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error(res.statusText);
+        setStatus("success");
+        form.reset();
+      })
+      .catch(() => setStatus("error"));
+  }
+
+  if (status === "success") {
+    return (
+      <div className="mt-8 rounded-[2rem] border border-green-200 bg-green-50 p-8 text-center shadow-sm">
+        <p className="text-lg font-semibold text-green-800">Thank you for your enquiry!</p>
+        <p className="mt-2 text-slate-600">I'll get back to you as soon as I can.</p>
+        <button
+          type="button"
+          onClick={() => setStatus("idle")}
+          className="mt-4 text-sm font-semibold text-indigo-700 hover:underline"
+        >
+          Send another message
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      onSubmit={handleSubmit}
+      className="mt-8 grid gap-4 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <div>
+        <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-700">Name</label>
+        <input id="name" name="name" required className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-indigo-500" placeholder="Your name" />
+      </div>
+      <div>
+        <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-700">Your email</label>
+        <input id="email" name="email" type="email" required className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-indigo-500" placeholder="you@example.com" />
+      </div>
+      <div>
+        <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-700">Message</label>
+        <textarea id="message" name="message" rows={6} required className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none ring-0 transition focus:border-indigo-500" placeholder="How can I help?" />
+      </div>
+      {status === "error" && (
+        <p className="text-sm text-red-600">Something went wrong. Please try again or email directly.</p>
+      )}
+      <div>
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 disabled:opacity-50"
+        >
+          {status === "submitting" ? "Sending\u2026" : "Submit enquiry"}
+        </button>
+      </div>
+    </form>
   );
 }
