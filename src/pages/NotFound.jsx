@@ -4,7 +4,7 @@ import Seo from "../Seo";
 export default function NotFound() {
   return (
     <section className="mx-auto flex max-w-7xl flex-col items-center px-4 py-32 text-center sm:px-6 lg:px-8">
-      <Seo title="Page not found" description="The page you are looking for does not exist." />
+      <Seo title="Page not found" description="The page you are looking for does not exist." noindex />
       <p className="text-7xl font-bold text-indigo-600">404</p>
       <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Page not found</h1>
       <p className="mt-4 text-lg text-slate-600">Sorry, the page you are looking for doesn't exist or has been moved.</p>

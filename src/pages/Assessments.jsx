@@ -1,4 +1,5 @@
 import Seo from "../Seo";
+import { ASSESSMENT_FEE } from "../site";
 
 export default function Assessments() {
   return (
@@ -30,7 +31,7 @@ export default function Assessments() {
             <p>I carry out assessments on my premises in Maidenbower, Crawley, West Sussex and often in the child's or young person's educational setting. I also travel across Sussex, Kent and Surrey for assessments ordered by schools, colleges and universities.</p>
           </div>
           <div className="mt-6 rounded-2xl bg-indigo-50 p-6">
-            <p className="text-lg font-semibold text-slate-950">Assessment fee: £510</p>
+            <p className="text-lg font-semibold text-slate-950">Assessment fee: {ASSESSMENT_FEE}</p>
             <p className="mt-2 leading-7 text-slate-700">This includes a pre-assessment virtual meeting, the assessment itself and a minimum of 30 minutes discussion afterwards to talk through the findings, report and recommendations. I am always available to answer follow-up emails and provide further information.</p>
           </div>
         </div>

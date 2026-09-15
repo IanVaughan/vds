@@ -1,5 +1,6 @@
 import Seo from "../Seo";
 import { Helmet } from "react-helmet-async";
+import { ASSESSMENT_FEE } from "../site";
 
 const faqs = [
   {
@@ -8,7 +9,7 @@ const faqs = [
   },
   {
     q: "How much do assessments cost?",
-    a: "The price for a dyslexia assessment is £490. This includes a pre-assessment virtual meeting and a minimum of 30 minutes discussion after the assessment to discuss the findings, report and recommendations for support. I am always available to answer emails and provide further information.",
+    a: `The price for a dyslexia assessment is ${ASSESSMENT_FEE}. This includes a pre-assessment virtual meeting and a minimum of 30 minutes discussion after the assessment to discuss the findings, report and recommendations for support. I am always available to answer emails and provide further information.`,
   },
   {
     q: "Do you offer assessments for schools, colleges or universities?",

@@ -84,7 +84,6 @@ function ContactForm() {
     <form
       name="contact"
       method="POST"
-      data-netlify="true"
       onSubmit={handleSubmit}
       className="mt-8 grid gap-4 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
     >

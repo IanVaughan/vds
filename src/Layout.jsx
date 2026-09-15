@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { SITE_URL } from "./site";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -8,7 +9,7 @@ const structuredData = {
   name: "Vaughan Dyslexia Services",
   description:
     "Diagnostic dyslexia assessments, access arrangement assessments and specialist tutoring for children and adults across Sussex, Kent and Surrey.",
-  url: "https://www.vaughandyslexiaservices.co.uk",
+  url: SITE_URL,
   telephone: "07708733772",
   email: "jodie@vaughandyslexiaservices.co.uk",
   address: {
