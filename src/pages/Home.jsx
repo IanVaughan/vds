@@ -21,7 +21,7 @@ export default function Home() {
             Across areas of Sussex, Kent and Surrey, with specialist tutoring offered locally.
           </p>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-700">
-            If you have dyslexia or another specific learning difficulty (SpLD), your difficulties can go way beyond reading, writing and spelling. You might struggle with organisation, sequencing your thoughts or ideas, maths or coordination. You might struggle to concentrate.
+            If you have dyslexia or another specific learning difficulty (SpLDs), your difficulties can go way beyond reading, writing and spelling. You might struggle with organisation, sequencing your thoughts or ideas, maths or coordination. You might struggle to concentrate.
           </p>
           <p className="mt-4 text-lg font-semibold text-slate-900">I am here to help.</p>
           <div className="mt-8 flex flex-wrap gap-4">
