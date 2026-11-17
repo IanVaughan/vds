@@ -61,6 +61,11 @@ test('access arrangements page uses its current heading', () => {
   assert.match(read('dist/access-arrangements.html'), /Access arrangements tailored to the individual\./);
 });
 
+test('access arrangements page includes its study-planning image on the right', () => {
+  assert.ok(existsSync(new URL('../dist/access-arrangements-study-planning.jpg', import.meta.url)));
+  assert.match(read('dist/access-arrangements.html'), /src="\/access-arrangements-study-planning\.jpg" alt="Study planning notes and revision materials"/);
+});
+
 test('FAQ page includes its puzzle-brain image on the right', () => {
   assert.ok(existsSync(new URL('../dist/faqs-puzzle-brain.jpg', import.meta.url)));
   assert.match(read('dist/faqs.html'), /src="\/faqs-puzzle-brain\.jpg" alt="Puzzle pieces forming a brain"/);
