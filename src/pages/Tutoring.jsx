@@ -11,6 +11,11 @@ export default function Tutoring() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Tutoring</p>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Specialist tutoring for children aged 6–16.</h1>
+          <img
+            src="/tutoring-learning-books.jpg"
+            alt="Colourful books spelling learning"
+            className="mt-8 w-full rounded-[2rem] object-cover shadow-sm"
+          />
         </div>
         <div className="space-y-5 rounded-[2rem] border border-slate-200 bg-white p-8 leading-8 text-slate-700 shadow-sm">
           <p>I deliver tutor sessions based on the recommendations in their diagnostic report and my initial assessment of needs, conducted during the introduction session, to plan a specific learning programme.</p>

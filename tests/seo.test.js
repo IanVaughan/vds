@@ -47,6 +47,11 @@ test('about page includes Jodie’s portrait below the heading', () => {
   assert.match(read('dist/about.html'), /src="\/jodie-vaughan\.jpg" alt="Jodie Vaughan"/);
 });
 
+test('tutoring page includes its learning image below the heading', () => {
+  assert.ok(existsSync(new URL('../dist/tutoring-learning-books.jpg', import.meta.url)));
+  assert.match(read('dist/tutoring.html'), /src="\/tutoring-learning-books\.jpg" alt="Colourful books spelling learning"/);
+});
+
 test('sitemap and robots use the final canonical host', () => {
   const sitemap = read('dist/sitemap.xml');
   assert.doesNotMatch(sitemap + read('dist/robots.txt'), /https:\/\/www\./);
