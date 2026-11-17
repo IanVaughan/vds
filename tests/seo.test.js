@@ -42,6 +42,11 @@ test('about page shows Jodie’s current children’s ages', () => {
   assert.match(read('dist/about.html'), /children aged 14 and 18 years old/);
 });
 
+test('about page includes Jodie’s portrait below the heading', () => {
+  assert.ok(existsSync(new URL('../dist/jodie-vaughan.jpg', import.meta.url)));
+  assert.match(read('dist/about.html'), /src="\/jodie-vaughan\.jpg" alt="Jodie Vaughan"/);
+});
+
 test('sitemap and robots use the final canonical host', () => {
   const sitemap = read('dist/sitemap.xml');
   assert.doesNotMatch(sitemap + read('dist/robots.txt'), /https:\/\/www\./);

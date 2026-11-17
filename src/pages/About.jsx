@@ -14,6 +14,11 @@ export default function About() {
             <span className="block">Jodie Vaughan</span>
             <span className="block">Specialist Teacher and Assessor for SpLDs (Dyslexia)</span>
           </h1>
+          <img
+            src="/jodie-vaughan.jpg"
+            alt="Jodie Vaughan"
+            className="mt-8 w-full max-w-md rounded-[2rem] object-cover shadow-sm"
+          />
         </div>
         <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
           <div className="space-y-5 leading-8 text-slate-700">
