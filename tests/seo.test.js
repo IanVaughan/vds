@@ -57,6 +57,11 @@ test('assessment page includes its dyslexia image below the heading', () => {
   assert.match(read('dist/assessments.html'), /src="\/dyslexia-assessment\.jpg" alt="Dictionary definition of dyslexia"/);
 });
 
+test('FAQ page includes its puzzle-brain image on the right', () => {
+  assert.ok(existsSync(new URL('../dist/faqs-puzzle-brain.jpg', import.meta.url)));
+  assert.match(read('dist/faqs.html'), /src="\/faqs-puzzle-brain\.jpg" alt="Puzzle pieces forming a brain"/);
+});
+
 test('sitemap and robots use the final canonical host', () => {
   const sitemap = read('dist/sitemap.xml');
   assert.doesNotMatch(sitemap + read('dist/robots.txt'), /https:\/\/www\./);

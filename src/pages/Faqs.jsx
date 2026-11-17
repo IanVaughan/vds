@@ -56,9 +56,16 @@ export default function Faqs() {
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-      <div className="max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">FAQs</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Frequently asked questions.</h1>
+      <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.8fr]">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">FAQs</p>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Frequently asked questions.</h1>
+        </div>
+        <img
+          src="/faqs-puzzle-brain.jpg"
+          alt="Puzzle pieces forming a brain"
+          className="w-full max-w-md justify-self-end rounded-[2rem] object-cover shadow-sm"
+        />
       </div>
       <div className="mt-10 grid gap-4">
         {faqs.map((item) => (
