@@ -57,6 +57,10 @@ test('assessment page includes its dyslexia image below the heading', () => {
   assert.match(read('dist/assessments.html'), /src="\/dyslexia-assessment\.jpg" alt="Dictionary definition of dyslexia"/);
 });
 
+test('access arrangements page uses its current heading', () => {
+  assert.match(read('dist/access-arrangements.html'), /Access arrangements tailored to the individual\./);
+});
+
 test('FAQ page includes its puzzle-brain image on the right', () => {
   assert.ok(existsSync(new URL('../dist/faqs-puzzle-brain.jpg', import.meta.url)));
   assert.match(read('dist/faqs.html'), /src="\/faqs-puzzle-brain\.jpg" alt="Puzzle pieces forming a brain"/);
