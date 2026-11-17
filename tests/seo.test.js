@@ -29,12 +29,17 @@ test('assessment price is £525 in page copy and FAQ structured data', () => {
     const html = read(file);
     assert.match(html, /£525/);
     assert.doesNotMatch(html, /£490/);
+    assert.doesNotMatch(html, /£510/);
     if (route === 'faqs') {
       const schemas = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map((match) => JSON.parse(match[1]));
       const faq = schemas.find((schema) => schema['@type'] === 'FAQPage');
       assert.match(faq.mainEntity.find((item) => item.name.includes('cost')).acceptedAnswer.text, /£525/);
     }
   }
+});
+
+test('about page shows Jodie’s current children’s ages', () => {
+  assert.match(read('dist/about.html'), /children aged 14 and 18 years old/);
 });
 
 test('sitemap and robots use the final canonical host', () => {

@@ -21,7 +21,7 @@ export default function About() {
             <p>I then qualified as a Level 7 Specialist Teacher and Assessor. I bring my vast experience and expertise into my Level 7 diagnostic assessments and teaching, giving advice and recommendations based on my knowledge, experience and creative teaching methods.</p>
             <p>I currently offer full diagnostic assessments for dyslexia, as well as private tutoring and study skills tuition.</p>
             <p>I have a current DBS check on the Update Service and an Assessment Practising Certificate (APC) from The Dyslexia Guild. These are available on request.</p>
-            <p>I am a mum to two children aged 12 and 16 years old. I have first-hand experience of living with adults and children with SpLDs, including dyslexia.</p>
+            <p>I am a mum to two children aged 14 and 18 years old. I have first-hand experience of living with adults and children with SpLDs, including dyslexia.</p>
           </div>
         </div>
       </div>
