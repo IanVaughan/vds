@@ -12,6 +12,11 @@ export default function Assessments() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">Assessments</p>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Diagnostic assessments from the age of 7.</h1>
+          <img
+            src="/dyslexia-assessment.jpg"
+            alt="Dictionary definition of dyslexia"
+            className="mt-8 w-full rounded-[2rem] object-cover shadow-sm"
+          />
         </div>
         <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8">
           <h3 className="text-xl font-semibold text-slate-950">What happens in a diagnostic assessment?</h3>

@@ -52,6 +52,11 @@ test('tutoring page includes its learning image below the heading', () => {
   assert.match(read('dist/tutoring.html'), /src="\/tutoring-learning-books\.jpg" alt="Colourful books spelling learning"/);
 });
 
+test('assessment page includes its dyslexia image below the heading', () => {
+  assert.ok(existsSync(new URL('../dist/dyslexia-assessment.jpg', import.meta.url)));
+  assert.match(read('dist/assessments.html'), /src="\/dyslexia-assessment\.jpg" alt="Dictionary definition of dyslexia"/);
+});
+
 test('sitemap and robots use the final canonical host', () => {
   const sitemap = read('dist/sitemap.xml');
   assert.doesNotMatch(sitemap + read('dist/robots.txt'), /https:\/\/www\./);
